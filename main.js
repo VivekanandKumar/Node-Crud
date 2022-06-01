@@ -6,13 +6,12 @@ const app = express();
 const routes = require("./routes/routes");
 
 //database connection
-mongoose.connect(process.env.URI);
-const db = mongoose.connection;
-db.on("error", (error) => {
-  console.log(error);
-});
-db.once("open", () => {
-  console.log("Database Connected");
+mongoose.connect(process.env.URI,(err)=>{
+  if(err){
+    console.log(err);
+    return;
+  }
+  console.log("Database connection established");
 });
 
 // middlewares
