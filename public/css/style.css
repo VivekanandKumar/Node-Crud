@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins',sans-serif !important;
+}
+.msg-alert{
+  font-weight: 400;
+  font-family: 'Poppins';
+}
+td,th{
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Poppins',sans-serif !important;
+  text-transform: capitalize;
+  letter-spacing: 1.2px;
+}
+th{
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+td:nth-child(3){
+  text-transform: lowercase;
+}
+tbody>tr{
+  text-align: left;
+}
+header{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #333;
+}
+header a{
+  transition: all .5s ease;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #fafafa;
+}
+header a:hover{
+  color: skyblue;
+}
+.model {
+  transition: all .5s ease;
+  width: 600px;
+  max-width: 100%;
+  background-color: #fff;
+  padding: 30px 50px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.model h1{
+  color: skyblue;
+  text-decoration: underline;
+}
+.model button{
+  width: 100%;
+  border: none;
+  padding: 12px 0;
+  border-radius: 4px;
+  background-color: rgba(106, 187, 219, 0.8);
+  color: #fafafa;
+  font-size: 18px;
+  transition: all .5s ease;
+}
+.model button:hover{
+  background-color: rgba(106, 187, 219, 1);
+}
+.input-controller {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+input{
+  padding: 8px;
+  color: #333;
+  font-size: 20px;
+  border: 2px solid gray;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  font-family: 'Poppins';
+  font-weight: 300;
+  text-transform: capitalize;
+}
+input[type="email"]{
+  text-transform: lowercase;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #333;
+  cursor: pointer;
+}
+
+input:focus{
+  outline: 2px solid skyblue;
+  border: none;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}

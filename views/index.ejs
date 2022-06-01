@@ -1,0 +1,44 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <div class="table-responsive my-5">
+    <% if (message) { %>
+    <div class="alert alert-dismissible fade show alert-<%= message.type %>" role="alert">
+      <strong class="msg-alert"><%= message.message %> </strong>
+      <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %>
+
+    <% if (userList != '') { %>
+    <table class="table table-striped">
+      <thead>
+        <tr class="table-dark">
+          <th>ID</th>
+          <th>Full Name</th>
+          <th>E-mail</th>
+          <th>Phone</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for( let index = 0; index < userList.length; index++ ) { %>
+        <tr class="align-middle">
+          <td><%= index+1 %> </td>
+          <td><%= userList[index].Name %> </td>
+          <td><%= userList[index].Email %> </td>
+          <td><%= userList[index].Phone %> </td>
+          <td>
+            <a href="/edit/<%= userList[index]._id  %>" class="text-success"><i class="fas fa-edit fa-lg mx-2"></i></a>
+            <a href="/delete/<%= userList[index]._id  %>" class="text-danger"><i
+                class="fas fa-trash fa-lg mx-1"></i></a>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+    <% } else { %>
+    <h1 class="text-center text-secondary my-5">No Record in Database</h1>
+    <% } %>
+  </div>
+</div>
+<%- include('partials/footer') %>

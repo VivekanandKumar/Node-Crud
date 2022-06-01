@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+  <div class="model-control d-flex justify-content-center my-5 px-3">
+    <form class="model px-5" action="/add" method="post">
+      <h1 class="mb-5">Add Record</h1>
+      <div class="input-controller">
+        <label for="fname">Full Name</label>
+        <input type="text" name="fullName" id="fname" required />
+      </div>
+      <div class="input-controller">
+        <label for="mail">Email</label>
+        <input type="email" name="email" id="mail" required />
+      </div>
+      <div class="input-controller">
+        <label for="mobile">Phone</label>
+        <input type="number" name="phone" id="mobile" required />
+      </div>
+      <button type="submit">ADD</button>
+    </form>
+  </div>
+  <%- include('partials/footer') %>
